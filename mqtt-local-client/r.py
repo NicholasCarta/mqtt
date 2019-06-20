@@ -1,3 +1,5 @@
+"""This script sends a data value to the thingspeak mqtt broker"""
+
 import paho.mqtt.client as mqtt
 import random as rnd
 
