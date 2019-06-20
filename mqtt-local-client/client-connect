@@ -1,3 +1,5 @@
+"""This script uses a local mosquitto server and will publish 5 random data values on a timed interval"""
+
 import paho.mqtt.client as mqtt
 import time
 import random
