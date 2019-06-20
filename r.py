@@ -1,12 +1,13 @@
 import paho.mqtt.client as mqtt
+import random as rnd
 
 client = mqtt.Client()
-client.connect("mqtt.thingspeak.com",1883,60)
+client.connect("mqtt.thingspeak.com", 1883, 60)
 
-channelId = "285697"         # Put your channel ID here,i.e.. the number from the URL, https://thingspeak.com/channels/285697
-apiKey = "ZJJKFJNYVRQWJRFD"  # Put the API key here (the Write API Key from the API Keys tab in ThingSpeak)
+channelId = "796449"  # Put your channel ID here,i.e.. the number from the URL, https://thingspeak.com/channels/285697
+apiKey = "CE3VZQG9NVE186VO"  # Put the API key here (the Write API Key from the API Keys tab in ThingSpeak)
 
-client.publish("channels/%s/publish/%s" % (channelId,apiKey), "field1=26&field2=1013")
+
+
+client.publish(f"channels/{channelId}/publish/{apiKey}" , "field1=102", 0)
 client.loop(2)
-
-
